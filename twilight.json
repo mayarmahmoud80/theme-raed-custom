@@ -1052,7 +1052,34 @@
                     "maxLength": 30
                 }
             ]
+        },
+         {
+    "name": "video_video",
+    "title": {
+      "ar": "فيديو الصفحة الرئيسية",
+      "en": "Homepage Video"
+    },
+    "icon": "sicon-video",
+    "path": "home.home-video",
+    "fields": [
+      {
+        "id": "home_video_url",
+        "type": "text",
+        "label": {
+          "ar": "رابط الفيديو في الصفحة الرئيسية",
+          "en": "Video URL"
         }
+      },
+      {
+        "id": "home_video_title",
+        "type": "text",
+        "label": {
+          "ar": "عنوان الفيديو في الصفحة الرئيسية",
+          "en": "Video Title"
+        }
+      }
+    ]
+  }
     ],
     "support_url": "https://salla.com/",
     "description": {
