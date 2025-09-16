@@ -214,6 +214,20 @@
             "required": false,
             "value": false,
             "selected": false
+        },  
+        {
+            "id": "home_video_url",
+            "type": "text",
+            "label": "رابط الفيديو في الصفحة الرئيسية",
+            "format": "text",
+            "required": false
+        },    
+        {
+            "id": "home_video_title",
+            "type": "text",
+            "label": "عنوان الفيديو في الصفحة الرئيسية",
+            "format": "text",
+            "required": false
         }
     ],
     "components": [
