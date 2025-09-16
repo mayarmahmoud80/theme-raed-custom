@@ -5,6 +5,7 @@
     },
     "repository": "https://github.com/SallaApp/theme-raed",
     "author_email": "support@salla.sa",
+    
     "features": [
         "mega-menu",
         "fonts",
@@ -214,7 +215,22 @@
             "required": false,
             "value": false,
             "selected": false
+        },
+        {
+            "id": "home_video_url",
+            "type": "text",
+            "label": "رابط الفيديو في الصفحة الرئيسية",
+            "format": "text",
+            "required": false
+        },
+        {
+            "id": "home_video_title",
+            "type": "text",
+            "label": "عنوان الفيديو في الصفحة الرئيسية",
+            "format": "text",
+            "required": false
         }
+
     ],
     "components": [
         {
@@ -1030,4 +1046,5 @@
         "ar": "مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
         "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
     }
+    
 }
