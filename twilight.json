@@ -1043,7 +1043,7 @@
                     "type": "string",
                     "id": "video_url",
                     "label": "رابط الفيديو",
-                    "format": "text",
+                    "format": "url",
                     "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                 }
             ]
