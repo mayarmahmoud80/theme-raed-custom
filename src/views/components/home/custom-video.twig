@@ -3,7 +3,7 @@
   {% if section.fields.video_title.value is iterable and section.fields.video_title.value['ar'] is defined %}
     {% set video_title = section.fields.video_title.value['ar'] %}
   {% else %}
-    {% set video_title = 'شاهد الفيديو الآن' %}
+    {% set video_title = 'شاهد الفيديو ' %}
   {% endif %}
 
   {# جلب رابط الفيديو بشكل آمن #}
