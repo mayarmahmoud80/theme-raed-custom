@@ -1027,29 +1027,35 @@
             ]
         },
         {
-    "key": "custom-video-section",
-    "title": "فيديو مخصص",
-    "icon": "sicon-video",
-    "path": "home.custom-video",
-    "image": "https://cdn.salla.sa/mQgZlG/K36XDnXG3odwQs7Xzy68IpM2wNuJ7uTImfBInlQ8.png",
-    "fields": [
-      {
-        "type": "string",
-        "id": "video_title",
-        "label": "عنوان الفيديو",
-        "format": "text",
-        "multilanguage": true,
-        "default": "شاهد الفيديو الآن"
-      },
-      {
-        "type": "string",
-        "id": "video_url",
-        "label": "رابط الفيديو",
-        "format": "text",
-        "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-      }
-    ]
-        }
+  "key": "custom-video-section",
+  "title": "فيديو مخصص",
+  "icon": "sicon-video",
+  "path": "home.custom-video",
+  "image": "https://cdn.salla.sa/mQgZlG/K36XDnXG3odwQs7Xzy68IpM2wNuJ7uTImfBInlQ8.png",
+  "fields": [
+    {
+      "type": "static",
+      "format": "description",
+      "id": "static-desc",
+      "value": "<div style='margin: -24px -20px 20px'><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/custom-video.png?v=1.1'></div>"
+    },
+    {
+      "type": "string",
+      "id": "video_title",
+      "label": "عنوان الفيديو",
+      "format": "text",
+      "multilanguage": true,
+      "value": "شاهد الفيديو الآن"
+    },
+    {
+      "type": "string",
+      "id": "video_url",
+      "label": "رابط الفيديو",
+      "format": "text",
+      "value": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    }
+  ]
+}
     ],
     "support_url": "https://salla.com/",
     "description": {
