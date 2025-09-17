@@ -1043,7 +1043,7 @@
                     "type": "string",
                     "id": "video_url",
                     "label": "رابط الفيديو",
-                    "format": "url",
+                    "format": "text",
                     "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                 }
             ]
@@ -1055,3 +1055,4 @@
         "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
     }
 }
+
