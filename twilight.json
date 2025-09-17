@@ -1045,7 +1045,10 @@
       "label": "عنوان الفيديو",
       "format": "text",
       "multilanguage": true,
-      "value": "شاهد الفيديو الآن"
+      "value": {
+        "ar": "شاهد الفيديو الآن",
+        "en": "Watch the video now"
+      }
     },
     {
       "type": "string",
