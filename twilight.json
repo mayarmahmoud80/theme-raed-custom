@@ -1034,12 +1034,6 @@
   "image": "https://cdn.salla.sa/mQgZlG/K36XDnXG3odwQs7Xzy68IpM2wNuJ7uTImfBInlQ8.png",
   "fields": [
     {
-      "type": "static",
-      "format": "description",
-      "id": "static-desc",
-      "value": "<div style='margin: -24px -20px 20px'><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/custom-video.png?v=1.1'></div>"
-    },
-    {
   "type": "string",
   "id": "video_title",
   "label": "عنوان الفيديو",
