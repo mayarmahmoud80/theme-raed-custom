@@ -1047,12 +1047,15 @@
   "placeholder": "أدخل عنوان الفيديو هنا..."
     },
     {
-      "type": "string",
-      "id": "video_url",
-      "label": "رابط الفيديو",
-      "format": "text",
-      "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    }
+  "type": "string",
+  "id": "video_url",
+  "label": "رابط الفيديو",
+  "format": "url",
+  "value": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  "required": false,
+  "placeholder": "أدخل رابط الفيديو هنا..."
+}
+
   ]
 }
     ],
