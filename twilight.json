@@ -1045,7 +1045,7 @@
       "label": "عنوان الفيديو",
       "format": "text",
       "multilanguage": true,
-      "value": {
+      "default": {
         "ar": "شاهد الفيديو الآن",
         "en": "Watch the video now"
       }
@@ -1055,7 +1055,7 @@
       "id": "video_url",
       "label": "رابط الفيديو",
       "format": "text",
-      "value": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     }
   ]
 }
