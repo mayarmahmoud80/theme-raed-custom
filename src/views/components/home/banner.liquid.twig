@@ -1,0 +1,24 @@
+<section class="custom-banner">
+  {% if section.settings.image %}
+    <img src="{{ section.settings.image | img_url('master') }}" alt="{{ section.settings.title }}">
+  {% endif %}
+
+  {% if section.settings.title %}
+    <h2>{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% if section.settings.date %}
+    <p>{{ section.settings.date }}</p>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "بانر مخصص",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "صورة البانر" },
+    { "type": "text", "id": "title", "label": "العنوان" },
+    { "type": "text", "id": "date", "label": "الوقت/التاريخ" }
+  ]
+}
+{% endschema %}
