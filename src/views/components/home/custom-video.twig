@@ -1,9 +1,16 @@
 <section class="video-section" style="text-align:center; padding: 40px 0;">
+  {% assign video_title = section.settings.video_title[shop.locale] %}
   <h2 style="color: #333;">
-    {{ fields.video_title ?? 'شاهد الفيديو الآن' }}
+    {{ video_title | default: 'شاهد الفيديو الآن' }}
   </h2>
-  <video autoplay muted loop playsinline controls style="width:100%; max-width: 700px; border-radius: 8px;">
-    <source src="{{ fields.video_url ?? 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' }}" type="video/mp4" />
-    متصفحك لا يدعم عرض الفيديو.
-  </video>
+
+  {% assign video_url = section.settings.video_url %}
+  {% if video_url %}
+    <video autoplay muted loop playsinline controls style="width:100%; max-width: 700px; border-radius: 8px;">
+      <source src="{{ video_url }}" type="video/mp4" />
+      متصفحك لا يدعم عرض الفيديو.
+    </video>
+  {% else %}
+    <p>لا يوجد رابط فيديو محدد.</p>
+  {% endif %}
 </section>
