@@ -214,6 +214,18 @@
             "required": false,
             "value": false,
             "selected": false
+        },
+        {
+            "type": "text",
+            "id": "home_video_title",
+            "label": "عنوان الفيديو",
+            "default": "شاهد الفيديو الآن"
+        },
+        {
+            "type": "url",
+            "id": "home_video_url",
+            "label": "رابط الفيديو",
+            "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         }
     ],
     "components": [
@@ -1021,30 +1033,6 @@
                     "required": false,
                     "minLength": 1,
                     "maxLength": 30
-                }
-            ]
-        },
-        {
-            "key": "custom-video-section",
-            "title": "فيديو مخصص",
-            "icon": "sicon-video",
-            "path": "home.custom-video",
-            "image": "https://cdn.salla.sa/mQgZlG/K36XDnXG3odwQs7Xzy68IpM2wNuJ7uTImfBInlQ8.png",
-            "fields": [
-                {
-                    "type": "string",
-                    "id": "video_title",
-                    "label": "عنوان الفيديو",
-                    "format": "text",
-                    "multilanguage": true,
-                    "default": "شاهد الفيديو الآن"
-                },
-                {
-                    "type": "string",
-                    "id": "video_url",
-                    "label": "رابط الفيديو",
-                    "format": "text",
-                    "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                 }
             ]
         }
