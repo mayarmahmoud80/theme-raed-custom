@@ -7,11 +7,12 @@
   {% endif %}
 
   {# جلب رابط الفيديو بشكل آمن #}
-  {% if section.fields.video_url.value is defined and section.fields.video_url.value != '' %}
-    {% set video_url = section.fields.video_url.value %}
-  {% else %}
-    {% set video_url = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
-  {% endif %}
+{% if section.fields.video_url.value is defined and section.fields.video_url.value != '' %}
+  {% set video_url = section.fields.video_url.value %}
+{% else %}
+  {% set video_url = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
+{% endif %}
+
 
   {# عرض العنوان #}
   <h2 style="color: #333; margin-bottom: 20px;">{{ video_title }}</h2>
