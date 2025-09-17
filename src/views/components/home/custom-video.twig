@@ -1,9 +1,9 @@
 <section class="video-section" style="text-align:center; padding: 40px 0;">
-  {# جلب عنوان الفيديو من لوحة التحكم أو استخدام الافتراضي #}
-  {% set video_title = section.fields.video_title.value['ar'] ?? 'شاهد الفيديو الآن' %}
-  
-  {# جلب رابط الفيديو من لوحة التحكم أو استخدام الافتراضي #}
-  {% set video_url = section.fields.video_url.value ?? 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
+  {# جلب عنوان الفيديو من لوحة التحكم أو الافتراضي #}
+  {% set video_title = section.settings.video_title['ar'] ?? 'شاهد الفيديو الآن' %}
+
+  {# جلب رابط الفيديو من لوحة التحكم أو الافتراضي #}
+  {% set video_url = section.settings.video_url ?? 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
 
   {% if video_title %}
     <h2 style="color: #333; margin-bottom: 20px;">{{ video_title }}</h2>
