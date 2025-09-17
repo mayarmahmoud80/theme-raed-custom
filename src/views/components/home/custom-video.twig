@@ -1,30 +1,33 @@
 <section class="video-section" style="text-align:center; padding: 40px 0;">
   {# جلب عنوان الفيديو بشكل آمن #}
-  {% if section.fields.video_title.value is iterable and section.fields.video_title.value['ar'] is defined %}
-    {% set video_title = section.fields.video_title.value['ar'] %}
-  {% else %}
-    {% set video_title = 'شاهد الفيديو الآن' %}
-  {% endif %}
+  {% set video_title = section.fields.video_title.value['ar'] 
+       if section.fields.video_title.value is iterable and section.fields.video_title.value['ar'] is defined 
+       else 'شاهد الفيديو الآن' %}
 
-  {# جلب رابط الفيديو بشكل آمن #}
-  {% if section.fields.video_url.value is defined and section.fields.video_url.value != '' %}
-    {% set video_url = section.fields.video_url.value %}
-  {% else %}
-    {% set video_url = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
-  {% endif %}
+  {# جلب رابط الفيديو بشكل آمن مع فيديو افتراضي #}
+  {% set video_url = section.fields.video_url.value 
+       if section.fields.video_url.value is defined and section.fields.video_url.value != '' 
+       else 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
 
   {# عرض العنوان #}
-  {% if video_title %}
-    <h2 style="color: #333; margin-bottom: 20px;">{{ video_title }}</h2>
-  {% endif %}
+  <h2 style="color: #333; margin-bottom: 20px;">{{ video_title }}</h2>
 
-  {# عرض الفيديو #}
-  {% if video_url %}
-    <video autoplay muted loop playsinline controls style="width:100%; max-width: 700px; border-radius: 8px;">
-      <source src="{{ video_url }}" type="video/mp4" />
-      متصفحك لا يدعم عرض الفيديو.
-    </video>
-  {% else %}
-    <p>لا يوجد رابط فيديو محدد.</p>
-  {% endif %}
+  {# عرض الفيديو مع تحديث تلقائي عند أي تغيير #}
+  <video id="mainVideo" autoplay muted loop playsinline controls 
+         style="width:100%; max-width: 700px; border-radius: 8px;">
+    <source src="{{ video_url }}" type="video/mp4" />
+    متصفحك لا يدعم عرض الفيديو.
+  </video>
+
+  <script>
+    // وظيفة لتحديث الفيديو فور تعديل الرابط من لوحة التحكم
+    const videoElement = document.getElementById('mainVideo');
+    const currentSrc = "{{ video_url }}";
+
+    // نتأكد لو الفيديو تغير نحدث المصدر
+    if(videoElement && videoElement.querySelector('source').src !== currentSrc) {
+      videoElement.querySelector('source').src = currentSrc;
+      videoElement.load(); // تحميل الفيديو الجديد فوراً
+    }
+  </script>
 </section>
