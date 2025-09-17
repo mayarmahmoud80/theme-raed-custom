@@ -1040,15 +1040,17 @@
       "value": "<div style='margin: -24px -20px 20px'><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/custom-video.png?v=1.1'></div>"
     },
     {
-      "type": "string",
-      "id": "video_title",
-      "label": "عنوان الفيديو",
-      "format": "text",
-      "multilanguage": true,
-      "value": {
-        "ar": "شاهد الفيديو الآن",
-        "en": "Watch the video now"
-  }
+  "type": "string",
+  "id": "video_title",
+  "label": "عنوان الفيديو",
+  "format": "text",
+  "multilanguage": true,
+  "value": {
+    "ar": "شاهد الفيديو الآن",
+    "en": "Watch the video now"
+  },
+  "required": false,
+  "placeholder": "أدخل عنوان الفيديو هنا..."
     },
     {
       "type": "string",
