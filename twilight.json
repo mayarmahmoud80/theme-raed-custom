@@ -24,6 +24,8 @@
         "menu-images",
         "filters"
     ],
+
+
     "settings": [
         {
             "id": "squar_photo_bg_image_size",
@@ -232,10 +234,10 @@
                     "value": "<div style='margin: -24px -20px 20px'><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/images-slider-enhancement.png?v=1.1'></div>"
                 },
                 {
-                    "type": "static",
-                    "format": "description",
-                    "id": "enhance-slider-note",
-                    "value": "<div style='background-color: #ddedff;color: #0a5a90;padding: 16px 20px;font-size: 14px;border-radius: 4px; margin: 0 0 30px;'>هذا العنصر غير مناسب لعرض البنرات، يمكنك استخدام عنصر <strong>صور متحركة</strong> بدلاً منه لتظهر صورة البنر بشكل كامل</div>"
+                  "type": "static",
+                  "format": "description",
+                  "id": "enhance-slider-note",
+                  "value": "<div style='background-color: #ddedff;color: #0a5a90;padding: 16px 20px;font-size: 14px;border-radius: 4px; margin: 0 0 30px;'>هذا العنصر غير مناسب لعرض البنرات، يمكنك استخدام عنصر <strong>صور متحركة</strong> بدلاً منه لتظهر صورة البنر بشكل كامل</div>"
                 },
                 {
                     "id": "slides",
@@ -1025,28 +1027,28 @@
             ]
         },
         {
-            "key": "custom-video-section",
-            "title": "فيديو مخصص",
-            "icon": "sicon-video",
-            "path": "home.custom-video",
-            "image": "https://cdn.salla.sa/mQgZlG/K36XDnXG3odwQs7Xzy68IpM2wNuJ7uTImfBInlQ8.png",
-            "fields": [
-                {
-                    "type": "string",
-                    "id": "video_title",
-                    "label": "عنوان الفيديو",
-                    "format": "text",
-                    "multilanguage": true,
-                    "default": "شاهد الفيديو الآن"
-                },
-                {
-                    "type": "string",
-                    "id": "video_url",
-                    "label": "رابط الفيديو",
-                    "format": "text",
-                    "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                }
-            ]
+    "key": "custom-video-section",
+    "title": "فيديو مخصص",
+    "icon": "sicon-video",
+    "path": "home.custom-video",
+    "image": "https://cdn.salla.sa/mQgZlG/K36XDnXG3odwQs7Xzy68IpM2wNuJ7uTImfBInlQ8.png",
+    "fields": [
+      {
+        "type": "string",
+        "id": "video_title",
+        "label": "عنوان الفيديو",
+        "format": "text",
+        "multilanguage": true,
+        "default": "شاهد الفيديو الآن"
+      },
+      {
+        "type": "string",
+        "id": "video_url",
+        "label": "رابط الفيديو",
+        "format": "text",
+        "default": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
+    ]
         }
     ],
     "support_url": "https://salla.com/",
@@ -1055,4 +1057,3 @@
         "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
     }
 }
-
