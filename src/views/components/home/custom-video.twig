@@ -15,12 +15,15 @@
 <section class="video-section" style="text-align:center; padding:40px 0;">
     <h2>{{ video_title }}</h2>
 
-    {% if video_url %}
-        <video autoplay muted loop playsinline controls style="width:100%; max-width:700px; border-radius:8px;">
-            <source src="{{ video_url }}" type="video/mp4" />
-            متصفحك لا يدعم عرض الفيديو.
-        </video>
-    {% else %}
-        <p>لا يوجد رابط فيديو محدد.</p>
-    {% endif %}
+{% if video_url %}
+  <video autoplay muted loop playsinline controls style="width:100%; max-width:700px; border-radius:8px;">
+      <source src="{{ video_url }}" type="video/mp4" />
+      متصفحك لا يدعم عرض الفيديو.
+  </video>
+{% else %}
+  <div style="background:#eee; width:100%; max-width:700px; height:300px; display:flex; align-items:center; justify-content:center; border-radius:8px;">
+      <p>لا يوجد فيديو حاليًا</p>
+  </div>
+{% endif %}
 </section>
+
