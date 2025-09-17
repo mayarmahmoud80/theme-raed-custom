@@ -1,6 +1,7 @@
 <section class="video-section" style="text-align:center; padding: 40px 0;">
   {% comment %} قراءة عنوان الفيديو حسب اللغة {% endcomment %}
-  {% assign video_title = section.settings.video_title | t %}
+  {% assign lang = shop.locale %}
+  {% assign video_title = section.settings.video_title[lang] %}
   
   {% if video_title %}
     <h2 style="color: #333; margin-bottom: 20px;">{{ video_title }}</h2>
