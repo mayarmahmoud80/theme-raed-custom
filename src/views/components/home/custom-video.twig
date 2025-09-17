@@ -1,24 +1,16 @@
 <section class="video-section" style="text-align:center; padding: 40px 0;">
   {# جلب عنوان الفيديو بشكل آمن #}
-  {% if section.fields.video_title.value is iterable and section.fields.video_title.value['ar'] is defined %}
-    {% set video_title = section.fields.video_title.value['ar'] %}
-  {% else %}
-    {% set video_title = 'شاهد الفيديو الآن' %}
-  {% endif %}
+  {% set video_title = section.fields.video_title.value['ar'] if section.fields.video_title.value is iterable and section.fields.video_title.value['ar'] is defined else 'شاهد الفيديو الآن' %}
 
-  {# جلب رابط الفيديو بشكل آمن #}
-  {% set video_url = section.fields.video_url.value | default('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4') %}
+  {# جلب رابط الفيديو بشكل آمن مع دعم فيديو افتراضي #}
+  {% set video_url = section.fields.video_url.value if section.fields.video_url.value is defined and section.fields.video_url.value != '' else 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
 
-  {% if video_title %}
-    <h2 style="color: #333; margin-bottom: 20px;">{{ video_title }}</h2>
-  {% endif %}
+  {# عرض العنوان #}
+  <h2 style="color: #333; margin-bottom: 20px;">{{ video_title }}</h2>
 
-  {% if video_url %}
-    <video autoplay muted loop playsinline controls style="width:100%; max-width: 700px; border-radius: 8px;">
-      <source src="{{ video_url }}" type="video/mp4" />
-      متصفحك لا يدعم عرض الفيديو.
-    </video>
-  {% else %}
-    <p>لا يوجد رابط فيديو محدد.</p>
-  {% endif %}
+  {# عرض الفيديو #}
+  <video autoplay muted loop playsinline controls style="width:100%; max-width: 700px; border-radius: 8px;">
+    <source src="{{ video_url }}?v={{ "now"|date("U") }}" type="video/mp4" />
+    متصفحك لا يدعم عرض الفيديو.
+  </video>
 </section>
