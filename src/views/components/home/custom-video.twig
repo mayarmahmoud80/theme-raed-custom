@@ -2,19 +2,19 @@
    قسم الفيديو المخصص
    ========================= #}
 
-{# تعيين متغيرات من لوحة التحكم أو من الحقول أو fallback #}
-{% set video_title = fields.video_title %}
-{% set video_url   = fields.video_url %}
-
 <section class="custom-video">
   <div class="container">
-    <h2>{{ video_title }}</h2>
+    {% if fields.video_title %}
+      <h2>{{ fields.video_title }}</h2>
+    {% endif %}
 
-    <div class="video-wrapper">
-      <video controls>
-        <source src="{{ video_url }}" type="video/mp4" />
-        متصفحك لا يدعم تشغيل الفيديو.
-      </video>
-    </div>
+    {% if fields.video_url %}
+      <div class="video-wrapper">
+        <video controls>
+          <source src="{{ fields.video_url }}" type="video/mp4" />
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+    {% endif %}
   </div>
 </section>
