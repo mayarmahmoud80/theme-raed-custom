@@ -1026,7 +1026,7 @@
                 }
             ]
         },
-        {
+{
   "key": "custom-heading-001",
   "title": "عنوان مخصص",
   "icon": "sicon-format-text-alt",
@@ -1044,17 +1044,20 @@
       "placeholder": "أدخل نص العنوان هنا..."
     },
     {
-      "type": "string",
       "id": "heading_tag",
-      "label": "نوع الوسم (مثال: h1 أو h2)",
-      "format": "text",
-      "required": false,
-      "value": "h2",
-      "placeholder": "h2"
+      "type": "items",
+      "format": "dropdown-list",
+      "label": "نوع الوسم",
+      "required": true,
+      "options": [
+        { "label": "H1", "value": "h1" },
+        { "label": "H2", "value": "h2" },
+        { "label": "H3", "value": "h3" }
+      ],
+      "value": "h2"
     }
   ]
 },
-
         {
   "key": "7f8d9a21-45bc-4a9f-b2af-92fcd3a5a111",
   "title": "فيديو مخصص",
