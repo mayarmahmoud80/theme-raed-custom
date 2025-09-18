@@ -1030,7 +1030,7 @@
   "key": "e7b9f2a4-3c5e-4a2b-9d1f-6c7b8a9e0d1f",
   "title": "عنوان مخصص",
   "icon": "sicon-format-text-alt",
-  "path": "home.custom-heading",
+  "path": "components.home.custom-heading",
   "image": "",
   "is_default": false,
   "fields": [
