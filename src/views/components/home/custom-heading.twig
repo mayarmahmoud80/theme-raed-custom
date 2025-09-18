@@ -1,17 +1,10 @@
-{# custom-heading.twig
-   سكشن بسيط يعرض عنوان واحد (h) قابل للتعديل من لوحة التحكم
-#}
-
-{% set heading_text = fields.heading_text|default('عنوان تجريبي') %}
-{% set heading_tag  = fields.heading_tag |default('h2') %}
+{% set tag = fields.heading_tag|default('h2') %}
+{% set text = fields.heading_text|default('') %}
 
 <section class="custom-heading">
   <div class="container">
-    {# امنح المستخدم اختيار نوع الهيدر (h1,h2,..) لو حبيت #}
-    {% if heading_tag in ['h1','h2','h3','h4','h5','h6'] %}
-      <{{ heading_tag }}>{{ heading_text }}</{{ heading_tag }}>
-    {% else %}
-      <h2>{{ heading_text }}</h2>
+    {% if text %}
+      <{{ tag }}>{{ text }}</{{ tag }}>
     {% endif %}
   </div>
 </section>
