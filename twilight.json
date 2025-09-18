@@ -1026,38 +1026,6 @@
                 }
             ]
         },
-{
-  "key": "e7b9f2a4-3c5e-4a2b-9d1f-6c7b8a9e0d1f",
-  "title": "عنوان مخصص",
-  "icon": "sicon-format-text-alt",
-  "path": "components.home.custom-heading",
-  "image": "",
-  "is_default": false,
-  "fields": [
-    {
-      "type": "string",
-      "id": "heading_text",
-      "label": "نص العنوان",
-      "format": "text",
-      "multilanguage": true,
-      "required": false,
-      "placeholder": "أدخل نص العنوان هنا..."
-    },
-    {
-      "id": "heading_tag",
-      "type": "items",
-      "format": "dropdown-list",
-      "label": "نوع الوسم",
-      "required": true,
-      "options": [
-        { "label": "H1", "value": "h1" },
-        { "label": "H2", "value": "h2" },
-        { "label": "H3", "value": "h3" }
-      ],
-      "value": "h2"
-    }
-  ]
-},
         {
   "key": "7f8d9a21-45bc-4a9f-b2af-92fcd3a5a111",
   "title": "فيديو مخصص",
@@ -1084,6 +1052,7 @@
     }
   ]
 }
+
     ],
     "support_url": "https://salla.com/",
     "description": {

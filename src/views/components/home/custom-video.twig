@@ -2,6 +2,7 @@
    قسم الفيديو المخصص
    ========================= #}
 
+{# تعيين متغيرات من لوحة التحكم أو من الحقول أو fallback #}
 {% set video_title = fields.video_title|default('شاهد الفيديو الآن') %}
 {% set video_url   = fields.video_url|default('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4') %}
 
@@ -17,22 +18,3 @@
     </div>
   </div>
 </section>
-
-{% schema %}
-{
-  "name": "custom-video",
-  "title": "🎥 قسم الفيديو المخصص",
-  "fields": [
-    {
-      "type": "text",
-      "id": "video_title",
-      "label": "عنوان الفيديو"
-    },
-    {
-      "type": "url",
-      "id": "video_url",
-      "label": "رابط الفيديو (mp4)"
-    }
-  ]
-}
-{% endschema %}
