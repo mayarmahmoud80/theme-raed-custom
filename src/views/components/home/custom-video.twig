@@ -1,0 +1,20 @@
+{# =========================
+   قسم الفيديو المخصص
+   ========================= #}
+
+{# تعيين متغيرات من لوحة التحكم أو من الحقول أو fallback #}
+{% set video_title = fields.video_title|default('شاهد الفيديو الآن') %}
+{% set video_url   = fields.video_url|default('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4') %}
+
+<section class="custom-video">
+  <div class="container">
+    <h2>{{ video_title }}</h2>
+
+    <div class="video-wrapper">
+      <video controls>
+        <source src="{{ video_url }}" type="video/mp4" />
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+  </div>
+</section>
