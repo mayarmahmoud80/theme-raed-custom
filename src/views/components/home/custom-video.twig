@@ -1,0 +1,60 @@
+<section class="custom-video">
+  <div class="container">
+
+    {# =========================
+       عنوان الفيديو
+       ========================= #}
+    {% set video_title = (block.settings.video_title or section.settings.video_title or fields.video_title) or 'شاهد الفيديو الآن' %}
+
+    {# =========================
+       نحاول نجيب رابط الفيديو من الصفحة المرتبطة إذا موجودة
+       ========================= #}
+    {% set video_page = block.settings.video_page or section.settings.video_page or fields.video_page %}
+    {% set video_page_url = video_page.url if video_page else null %}
+
+    {# =========================
+       إذا الصفحة المرتبطة موجودة، حاول نجيب الفيديو من خصائصها
+       وإلا استخدم رابط الفيديو العادي
+       ========================= #}
+    {% set video_url_from_page = video_page.video_url if video_page and video_page.video_url else null %}
+    {% set video_url = video_url_from_page or (block.settings.video_url or section.settings.video_url or fields.video_url) or 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
+
+    {% if video_title %}
+      <h2 class="text-center">{{ video_title }}</h2>
+    {% endif %}
+
+    {% if video_page_url %}
+      <p style="color:green; text-align:center;">صفحة مرتبطة: <a href="{{ video_page_url }}">{{ video_page.title }}</a></p>
+    {% endif %}
+
+    <p style="color:red; text-align:center;">الرابط الحالي للفيديو: {{ video_url }}</p>
+
+    <div class="video-wrapper" style="text-align:center; margin-top:20px;">
+      {% if video_url contains "youtube.com" or video_url contains "youtu.be" %}
+        {# --- رابط يوتيوب --- #}
+        <iframe width="560" height="315"
+                src="{{ video_url | replace('watch?v=', 'embed/') }}"
+                frameborder="0"
+                allowfullscreen
+                style="max-width:100%;"></iframe>
+
+      {% elseif video_url contains "vimeo.com" %}
+        {# --- رابط Vimeo --- #}
+        {% set vimeo_id = video_url | split('/') | last %}
+        <iframe src="https://player.vimeo.com/video/{{ vimeo_id }}"
+                width="560" height="315"
+                frameborder="0"
+                allowfullscreen
+                style="max-width:100%;"></iframe>
+
+      {% else %}
+        {# --- رابط mp4 مباشر --- #}
+        <video controls style="max-width:100%;height:auto;">
+          <source src="{{ video_url }}" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
