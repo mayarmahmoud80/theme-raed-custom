@@ -1,23 +1,35 @@
-{# =========================
-   قسم الفيديو المخصص
-   ========================= #}
-
-{% set video_title = fields.video_title|default('شاهد الفيديو الآن') %}
-{% set video_url   = fields.video_url|default('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4') %}
-
 <section class="custom-video">
   <div class="container">
-    {% if video_title %}
-      <h2>{{ video_title }}</h2>
-    {% endif %}
 
-    {% if video_url %}
-      <div class="video-wrapper">
-        <video controls>
-          <source src="{{ video_url }}" type="video/mp4" />
+    {% set video_title = block.settings.video_title or fields.video_title or 'شاهد الفيديو الآن' %}
+    {% set video_url = block.settings.video_url or fields.video_url or 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' %}
+
+    <h2 class="text-center">{{ video_title }}</h2>
+    <p style="color:red; text-align:center;">الرابط الحالي للفيديو: {{ video_url }}</p>
+
+    <div class="video-wrapper" style="text-align:center; margin-top:20px;">
+      {% if video_url contains "youtube.com" or video_url contains "youtu.be" %}
+        <iframe width="560" height="315"
+                src="{{ video_url | replace('watch?v=', 'embed/') }}"
+                frameborder="0"
+                allowfullscreen
+                style="max-width:100%;"></iframe>
+
+      {% elseif video_url contains "vimeo.com" %}
+        {% set vimeo_id = video_url | split('/') | last %}
+        <iframe src="https://player.vimeo.com/video/{{ vimeo_id }}"
+                width="560" height="315"
+                frameborder="0"
+                allowfullscreen
+                style="max-width:100%;"></iframe>
+
+      {% else %}
+        <video controls style="max-width:100%;height:auto;">
+          <source src="{{ video_url }}" type="video/mp4">
           متصفحك لا يدعم تشغيل الفيديو.
         </video>
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
+
   </div>
 </section>
