@@ -1036,7 +1036,7 @@
     {
       "type": "string",
       "id": "video_title",
-      "label": "عنوان الفيديو",
+      "label": " الفيديو",
       "format": "text",
       "multilanguage": true,
       "required": false,
@@ -1045,7 +1045,7 @@
     {
       "type": "string",
       "id": "video_url",
-      "label": "رابط الفيديو",
+      "label": " الفيديو",
       "format": "url",
       "required": false,
       "placeholder": "أدخل رابط الفيديو هنا..."
