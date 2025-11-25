@@ -1,0 +1,23 @@
+{# =========================
+   قسم الفيديو المخصص
+   ========================= #}
+
+{% set video_title = fields.video_title|default('شاهد الفيديو الآن') %}
+{% set video_url   = fields.video_url|default('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4') %}
+
+<section class="custom-video">
+  <div class="container">
+    {% if video_title %}
+      <h2>{{ video_title }}</h2>
+    {% endif %}
+
+    {% if video_url %}
+      <div class="video-wrapper">
+        <video controls>
+          <source src="{{ video_url }}" type="video/mp4" />
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+    {% endif %}
+  </div>
+</section>
