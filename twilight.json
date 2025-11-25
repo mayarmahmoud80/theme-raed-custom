@@ -1025,24 +1025,7 @@
                     "maxLength": 30
                 }
             ]
-        },
-{
-  "key": "custom_title",
-  "title": "عنوان مخصص",
-  "icon": "sicon-text",
-  "fields": [
-    {
-      "type": "string",
-      "id": "title",
-      "label": "أدخل العنوان",
-      "required": false,
-      "placeholder": "اكتب العنوان هنا..."
-    }
-  ]
-}
-
-
-
+        }
     ],
     "support_url": "https://salla.com/",
     "description": {
