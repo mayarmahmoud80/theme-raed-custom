@@ -1026,39 +1026,7 @@
                 }
             ]
         },
-        {
-  "key": "7f8d9a21-45bc-4a9f-b2af-92fcd3a5a111",
-  "title": "فيديو مخصص",
-  "icon": "sicon-video",
-  "path": "home.custom-video",
-  "image": "https://cdn.salla.sa/mQgZlG/JMJiEx1KVn7mzxo5FdtsVsAmpWPM8UJW0i0B93c0.png",
-  "fields": [
-    {
-      "type": "string",
-      "id": "video_title",
-      "label": "عنوان الفيديو",
-      "format": "text",
-      "multilanguage": true,
-      "required": false,
-      "placeholder": "أدخل عنوان الفيديو هنا..."
-    },
-    {
-      "type": "string",
-      "id": "video_url",
-      "label": "رابط الفيديو",
-      "format": "url",
-      "required": false,
-      "placeholder": "أدخل رابط الفيديو هنا..."
-    },
-    {
-      "type": "page",
-      "id": "video_page",
-      "label": "صفحة مرتبطة",
-      "required": false,
-      "placeholder": "اختر صفحة لربط الفيديو بها"
-    }
-  ]
-},{
+{
   "key": "custom_title",
   "title": "عنوان مخصص",
   "icon": "sicon-text",
